@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória - Craques das Copas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="container text-center my-4">
+        <section id="login-screen">
+            <h1>Bem-vindo ao Jogo da Memória - Craques das Copas</h1>
+            <form id="login-form" class="mt-4">
+                <div class="form-group">
+                    <label for="name" class="sr-only">Digite seu nome</label>
+                    <input type="text" id="name" class="form-control" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="sr-only">Digite seu email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Digite seu email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+        </section>
+
+        <section id="game-screen" style="display: none;">
+            <h1>Jogo da Memória - Craques das Copas</h1>
+            <div id="game-board" class="d-flex flex-wrap justify-content-center my-4"></div>
+            <div class="controls">
+                <button id="reset" class="btn btn-primary">Reiniciar Jogo</button>
+                <p class="mt-2">Tempo: <span id="timer">00:00</span></p>
+                <h4 class="mt-4">Nível: <span id="level">1</span></h4>
+                <p class="mt-2">Erros: <span id="errors">0</span> | Acertos: <span id="matches">0</span></p>
+                <h4 class="mt-2">Eficiência: <span id="efficiency">100%</span></h4>
+                <p id="message"></p>
+                <ul id="ranking-list" class="list-group mt-4"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
